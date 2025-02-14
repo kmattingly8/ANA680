@@ -8,23 +8,45 @@
 <body>
     <h2>Enter Patient Information</h2>
     <form method="POST" action="/predict">
-        <label for="var_1">Variable 1:</label>
-        <input type="text" name="var_1" required><br>
+        <label for="Clump_thickness">Clump Thickness:</label>
+        <input type="text" name="Clump_thickness" required><br>
 
-        <label for="var_2">Variable 2:</label>
-        <input type="text" name="var_2" required><br>
+        <label for="Uniformity_of_cell_size">Uniformity of Cell 
+Size:</label>
+        <input type="text" name="Uniformity_of_cell_size" required><br>
 
-        <label for="var_3">Variable 3:</label>
-        <input type="text" name="var_3" required><br>
+        <label for="Uniformity_of_cell_shape">Uniformity of Cell 
+Shape:</label>
+        <input type="text" name="Uniformity_of_cell_shape" required><br>
 
-        <label for="var_4">Variable 4:</label>
-        <input type="text" name="var_4" required><br>
+        <label for="Marginal_adhesion">Marginal Adhesion:</label>
+        <input type="text" name="Marginal_adhesion" required><br>
 
-        <label for="var_5">Variable 5:</label>
-        <input type="text" name="var_5" required><br>
+        <label for="Single_epithelial_cell_size">Single Epithelial Cell 
+Size:</label>
+        <input type="text" name="Single_epithelial_cell_size" 
+required><br>
+
+        <label for="Bare_nuclei">Bare Nuclei:</label>
+        <input type="text" name="Bare_nuclei" required><br>
+
+        <label for="Bland_chromatin">Bland Chromatin:</label>
+        <input type="text" name="Bland_chromatin" required><br>
+
+        <label for="Normal_nucleoli">Normal Nucleoli:</label>
+        <input type="text" name="Normal_nucleoli" required><br>
+
+        <label for="Mitoses">Mitoses:</label>
+        <input type="text" name="Mitoses" required><br>
 
         <button type="submit">Predict</button>
     </form>
+
+	<!-- Display prediction result if available -->
+    {% if prediction %}
+        <h3>Prediction Result: {{ prediction }}</h3>
+    {% endif %}
+
 </body>
 </html>
 
